@@ -1,0 +1,53 @@
+{
+  "categories": [
+    {   
+      "name": "mobile",
+      "image": "https://img.freepik.com/free-vector/display-template-with-smartphones_79603-1239.jpg?t=st=1743687476~exp=1743691076~hmac=b735496e4299b757a0a135721cf9ed3756b2b1b7df64b8eb86e9b1757a8c1fad&w=1380"
+    },
+    {
+      "name": "gaming",
+      "image": "https://img.freepik.com/free-psd/3d-rendering-gamer-room-illustration_23-2151642712.jpg?t=st=1743687552~exp=1743691152~hmac=274e71adec687687a7328337bccaa1ec5ebfb46bee3d4c3b25573cccb96f2114&w=1060"
+    },
+    {
+      "name": "laptop",
+      "image": "https://img.freepik.com/free-photo/laptop-with-blank-black-screen-white-table_53876-97915.jpg?t=st=1743687724~exp=1743691324~hmac=0be065b6ffd95f815c6607b959d7c87e16848f0a0d9b7b55142a844c4cbb0584&w=1380"
+    },
+    {
+      "name": "tv",
+      "image": "https://img.freepik.com/free-photo/view-computer-monitor-display_23-2150757445.jpg?t=st=1743613266~exp=1743616866~hmac=c007ca4d444a0e0f9b5180a49a7724e631fd85305adc753266d85344dd977945&w=1380"
+    },
+    {
+      "name": "appliances",
+      "image": "https://img.freepik.com/free-vector/household-appliances-realistic-composition_1284-65307.jpg?t=st=1743687621~exp=1743691221~hmac=d5d7bea928465ab8b0d60abfd53d836e9ab0261d58b186c1a325aa0d131f87b7&w=1380"
+    }
+  ],
+ 
+  "best":[
+    {
+      "id":1,
+      "title":"iphone 16",
+      "image":"https://img.freepik.com/free-photo/levitating-music-headphones-display_23-2149817601.jpg?t=st=1743637199~exp=1743640799~hmac=124e15000058a0509bc80287de29473810f0e5cc22d1df5c75bf1ef13aef781e&w=1380"
+      ,"price":20
+    },
+    {
+      "id":2,
+      "title":"hp 17 notebook",
+      "image":"https://img.freepik.com/free-photo/laptop-with-blank-black-screen-white-table_53876-97915.jpg?t=st=1743637394~exp=1743640994~hmac=5d25b53227ab5349a5d6dc8efd67fb860335bb6bd195b63f38ea19d564a193a7&w=1380"
+      ,"price":30
+    }
+    ,
+    {
+      "id":3,
+      "title":"hp 17 notebook",
+      "image":"https://img.freepik.com/free-photo/view-modern-hot-air-fryer-with-cooked-food_23-2151737076.jpg?t=st=1743637549~exp=1743641149~hmac=a6e0ca454cb9666fc663481d4076387dc20bb40faf7db78485a6f7c3ab68b755&w=1380"
+      ,"price":44
+    }
+  ],
+
+  "api_url":{
+    "name":"https://fakestoreapi.in/api"
+  },
+
+
+  "products": {}
+}
