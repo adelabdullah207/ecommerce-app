@@ -177,9 +177,9 @@ export default function Header() {
             <Link to="/cart" className="capitalize font-semibold flex gap-1.5">
               <FaCartPlus size={20} />
               cart
-              <div className="absolute p-[2px] -top-4 -left-4 z-50 text-center bg-red-400  rounded-4xl text-white">
-                <p className="text-xs">{cart.totalAmount}</p>
-              </div>
+              <p className="absolute -top-5 -z-10 -left-5 text-sm text-red-400 bg-white  p-2 rounded-full">
+                {cart.totalAmount}
+              </p>
             </Link>
           </span>
           {/* mobile */}

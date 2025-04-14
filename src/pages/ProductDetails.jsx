@@ -42,7 +42,7 @@ export default function ProductDetails() {
             </span>
             <button
               onClick={() => dispatch(addToCart(data.product.product))}
-              className="bg-cyan-700 text-white p-3 rounded-md"
+              className="bg-cyan-700 text-white p-3 rounded-md cursor-pointer hover:translate-x-1.5 duration-200 transition-all"
             >
               add to cart
             </button>
