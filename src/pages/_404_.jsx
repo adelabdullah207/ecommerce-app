@@ -10,7 +10,7 @@ export default function _404_() {
         we are sorry the page you are looking for was not founded !
       </h1>
       <Link to="/ecommerce-app/">
-        <button className=" transition-all duration-200 md:p-2 p-1 hover:cursor-pointer hover:text-white hover:bg-red-700 md:text-2xl text-xl rounded-md flex items-center justify-center gap-0.5">
+        <button className=" transition-all duration-200 md:p-2 p-1 hover:cursor-pointer hover:text-white hover:bg-cyan-500 md:text-2xl text-xl rounded-md flex items-center justify-center gap-0.5">
           <IoArrowBackCircle size={30} />
           <p className=" capitalize font-bold"> back home</p>
         </button>

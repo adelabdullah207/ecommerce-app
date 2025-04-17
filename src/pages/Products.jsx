@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { fetchCategory } from "../app/categorySlice";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
-import { IoReturnUpBackSharp } from "react-icons/io5";
+import { MdKeyboardBackspace } from "react-icons/md";
 
 export default function Products() {
   const dispatch = useDispatch();
@@ -20,8 +20,8 @@ export default function Products() {
       </h1>
       <Link to="/ecommerce-app/">
         <span className="flex items-center gap-1 hover:translate-x-1.5 duration-200 transition-all">
-          <IoReturnUpBackSharp size={30} />
-          <p className="capitalize text-xl">back to main</p>
+          <MdKeyboardBackspace size={30} />
+          <p className="capitalize text-xl my-5">back to main</p>
         </span>
       </Link>
 
@@ -31,13 +31,13 @@ export default function Products() {
           <p className="capitalize">loading...</p>
         </div>
       ) : data.isSuccess ? (
-        <ul className="grid grid-cols-4 gap-1 mt-5">
+        <ul className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-1 mt-5">
           {data.products.products.map((product) => (
             <Link key={product.id} to={`/products/${product.id}`}>
               <li className="p-5 flex justify-between items-center flex-col w-full h-full border-1 border-gray-200 hover:scale-95 transition-all duration-200 cursor-pointer">
                 <img loading="lazy" src={product.image} alt={product.title} />
                 <p>{product.title}</p>
-                <hr/>
+                <hr />
                 <span className="w-full flex justify-between items-center">
                   <p className=" capitalize font-bold text-xl">price</p>
                   <p className=" font-bold">{product.price}</p>

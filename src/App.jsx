@@ -19,7 +19,7 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path="ecommerce-app/" element={<Home />} />
+          <Route path="/ecommerce-app/" element={<Home />} />
           <Route path="/products/:id" element={<ProductDetails />} />
           <Route path="/products/categories/:cat_name" element={<Products />} />
           <Route path="/cart" element={<Cart />} />

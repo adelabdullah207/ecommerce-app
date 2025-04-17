@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
-import "../styles/header.css";
+
+import { ReactTyped } from "react-typed";
+
 // icons
 import { IoCloseOutline } from "react-icons/io5";
 import { FaShuttleVan } from "react-icons/fa";
@@ -151,12 +153,24 @@ export default function Header() {
             </Link>
           </span>
           <span className="relative xl:flex items-center hidden">
-            <input
-              id="search"
-              type="search"
-              placeholder="search for a product"
-              className="bg-gray-50 p-1 w-[400px] max-w-[500px] rounded-md lg:max-w-[600px] outline-none border-2 border-transparent focus:border-cyan-600 transition-all duration-150"
-            />
+            <ReactTyped
+              strings={[
+                "Search for a product",
+                "Search for a category",
+                "Search for a brand",
+              ]}
+              typeSpeed={40}
+              backSpeed={50}
+              attr="placeholder"
+              loop
+            >
+              <input
+                id="search"
+                type="search"
+                placeholder="search for a product"
+                className="bg-gray-50 p-1 w-[400px] max-w-[500px] rounded-md lg:max-w-[600px] outline-none border-2 border-transparent focus:border-cyan-600 transition-all duration-150"
+              />
+            </ReactTyped>
             <label htmlFor="search" className=" rounded-md">
               <IoSearchCircleSharp size={30} className="text-cyan-600" />
             </label>
