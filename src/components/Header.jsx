@@ -65,18 +65,17 @@ export default function Header() {
         initial={{ opacity: 0, y: -100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3 }}
-        className={` bg-violet-700 text-white text-center p-1 relative  ${
+        className={`w-full h-fit bg-violet-700 text-white text-center py-2 relative  ${
           headerNewsLine ? "block" : "hidden"
-        }`}
+        } flex justify-center items-center gap-3`}
       >
-        <h1 className="capitalize  lg:text-xl md:text-md text-sm ">
+        <h1 className="capitalize  lg:text-xl md:text-md text-xs ">
           legendary bosch buys - hurry, Limited time only
         </h1>
         {headerNewsLine && (
           <IoCloseOutline
             onClick={() => setHeaderNewsLine(!headerNewsLine)}
-            size={30}
-            className="absolute top-0 right-3.5 cursor-pointer "
+            className=" cursor-pointer lg:text-2xl text-xl "
           />
         )}
       </motion.div>
