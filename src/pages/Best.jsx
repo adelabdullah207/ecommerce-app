@@ -1,12 +1,15 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import data from "../utils/data.json";
+import { useDispatch } from "react-redux";
+
+// react slick
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+// icons
 import { FaHeart } from "react-icons/fa";
 import { MdAddShoppingCart } from "react-icons/md";
 import { MdNavigateNext } from "react-icons/md";
-import { useDispatch, useSelector } from "react-redux";
 
 export default function Best() {
   const ref = useRef();

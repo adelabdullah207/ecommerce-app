@@ -1,14 +1,20 @@
 import { React, lazy, useEffect, useState } from "react";
-import data from "../utils/data.json";
+
+// react slick
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
+// icons
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProducts } from "../app/productSlice";
 import { Link } from "react-router-dom";
-const Categories = lazy(() => import("../components/Categories"));
+import { FaHeart } from "react-icons/fa";
+import { MdAddShoppingCart } from "react-icons/md";
 
+// lazy loading components
 const Best = lazy(() => import("./Best"));
+const Categories = lazy(() => import("../components/Categories"));
 
 export default function Home() {
   const dispatch = useDispatch();
@@ -39,9 +45,23 @@ export default function Home() {
           <ul className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-1 mt-5">
             {data.products.products.map((product) => (
               <Link key={product.id} to={`/products/${product.id}`}>
-                <li className="w-full h-full border-1 border-gray-200 hover:scale-95 transition-all duration-200 cursor-pointer">
-                  <img loading="lazy" src={product.image} alt={product.title} />
-                  <p>{product.title}</p>
+                <li className="w-fit h-full border-1 border-gray-200 hover:scale-95 transition-all duration-200 cursor-pointer">
+                  <div className="group relative w-full h-full rounded-md">
+                    <img
+                      loading="lazy"
+                      src={product.image}
+                      alt={product.title}
+                      className="group-hover:opacity-90 z-10 w-full h-full"
+                    />
+                    <span className="text-white font-bold text-center absolute top-0 left-0 flex flex-col  justify-center items-center -z-50 group-hover:z-20 bg-black/30 w-full h-full rounded-md">
+                      <p>{product.title}</p>
+                      <hr  />
+                      <span className="w-[90%] mt-3 flex justify-between items-center">
+                        <p className=" capitalize">price</p>
+                        <p className="text-xl">{product.price}$</p>
+                      </span>
+                    </span>
+                  </div>
                 </li>
               </Link>
             ))}
@@ -52,7 +72,6 @@ export default function Home() {
           </div>
         )}
         {/* end of products area */}
-
         <Best />
       </section>
     </>

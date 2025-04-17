@@ -1,5 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/header.css";
+// icons
 import { IoCloseOutline } from "react-icons/io5";
 import { FaShuttleVan } from "react-icons/fa";
 import { MdRecycling } from "react-icons/md";
@@ -15,7 +16,6 @@ import { MdManageAccounts } from "react-icons/md";
 import { CgMenuRight } from "react-icons/cg";
 import { Link } from "react-router-dom";
 import { FaClipboardList } from "react-icons/fa";
-import cartSlice from "../app/cartSlice";
 import { useSelector } from "react-redux";
 
 export default function Header() {
@@ -63,18 +63,18 @@ export default function Header() {
         initial={{ opacity: 0, y: -100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3 }}
-        className={`bg-violet-700 text-white text-center p-1 relative ${
+        className={` bg-violet-700 text-white text-center p-1 relative  ${
           headerNewsLine ? "block" : "hidden"
         }`}
       >
-        <h1 className="capitalize">
+        <h1 className="capitalize  lg:text-xl md:text-md text-sm ">
           legendary bosch buys - hurry, Limited time only
         </h1>
         {headerNewsLine && (
           <IoCloseOutline
             onClick={() => setHeaderNewsLine(!headerNewsLine)}
             size={30}
-            className="absolute top-0 right-3.5 cursor-pointer"
+            className="absolute top-0 right-3.5 cursor-pointer "
           />
         )}
       </motion.div>
@@ -143,7 +143,10 @@ export default function Header() {
               size={30}
               className="hover:rotate-x-180 cursor-pointer transition-all duration-300"
             />
-            <Link to="/" className="capitalize text-2xl font-light">
+            <Link
+              to="/ecommerce-app/"
+              className="capitalize text-2xl font-light"
+            >
               <span className="text-cyan-600 font-bold">E-commerce</span>
             </Link>
           </span>
@@ -193,7 +196,7 @@ export default function Header() {
               variants={containerVariants}
               initial="close"
               animate={containerControls}
-              className={`absolute -left-200 top-0 bg-white h-screen p-3 text-nowrap z-50`}
+              className={`fixed -left-200 top-0 bg-white h-screen p-3 text-nowrap z-50`}
             >
               <li className="flex items-center gap-1.5 capitalize">
                 <img

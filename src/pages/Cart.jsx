@@ -1,7 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { addToCart, delFromCart } from "../app/cartSlice";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+// redux
+import { useDispatch, useSelector } from "react-redux";
+import { delFromCart } from "../app/cartSlice";
+// icons
+import { MdDelete } from "react-icons/md";
 
 export default function Cart() {
   const dispatch = useDispatch();
@@ -17,18 +20,20 @@ export default function Cart() {
       <h1 className="mb-7 text-center m-auto pb-2 capitalize text-4xl border-transparent border-2 border-b-cyan-600 w-96">
         my cart
       </h1>
-      <ul className="w-full flex flex-col gap-3">
+      <ul className="">
         {cart.product.map((product) => (
           <li
             key={product.id}
-            className="grid gap-3 lg:grid-cols-2 grid-cols-1 justify-items-center items-center rounded-3xl  "
+            className="flex justify-center items-center lg:flex-row flex-col "
           >
-            <img
-              className="w-[50%] h-fit"
-              src={product.image}
-              title={product.title}
-            />
-            <span className="flex flex-col gap-1.5">
+            <span className="lg:w-[50%] w-full h-fit">
+              <img
+                src={product.image}
+                title={product.title}
+                className="lg:w-[50%] w-full m-auto hover:scale-95 duration-150 transition-all"
+              />
+            </span>
+            <span className="lg:w-[50%] w-full">
               <p className="text-xl font-bold capitalize">{product.title}</p>
               <hr className="text-gray-200 my-2" />
               <span className="flex justify-between items-center mb-2">
@@ -37,20 +42,20 @@ export default function Cart() {
               </span>
               <button
                 onClick={() => dispatch(delFromCart(product))}
-                className="bg-red-500 text-white p-2 lg:w-[50%] w-[100%] rounded-md hover:cursor-pointer"
+                className="bg-red-500 flex gap-1 hover:bg-red-600 transition-all duration-200 text-white p-2  rounded-md hover:cursor-pointer"
               >
+                <MdDelete size={25} />
                 delete
               </button>
             </span>
-            <br className="text-gray-200 border-2 my-2" />
           </li>
         ))}
       </ul>
       {cart.product.length == 0 ? (
         <>
-          <div className="flex gap-2 capitalize flex-col justify-center items-center w-full h-full">
+          <div className="flex gap-2 capitalize flex-col justify-center items-center w-full h-screen">
             empty list ...
-            <Link to="/">
+            <Link to="/ecommerce-app/">
               <button className="cursor-pointer bg-cyan-600  m-auto text-white p-2 rounded-md capitalize">
                 go back shopping
               </button>
