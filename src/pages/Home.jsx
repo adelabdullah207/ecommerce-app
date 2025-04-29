@@ -31,7 +31,7 @@ export default function Home() {
         </div>
 
         <section className=" flex items-center justify-center w-[100%] m-auto lg:flex-row flex-col">
-          <div className="w-full flex justify-center flex-col items-start h-screen bg-fixed bg-bottom bg-cover bg-[red]">
+          <div className="w-full flex justify-center flex-col items-start h-screen bg-fixed bg-bottom bg-cover bg-[url('./back.jpg')]">
             <motion.div
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
