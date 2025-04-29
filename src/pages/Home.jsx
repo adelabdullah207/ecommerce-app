@@ -30,8 +30,8 @@ export default function Home() {
           </div>
         </div>
 
-        <section className=" flex items-center justify-center w-[100%] m-auto lg:flex-row flex-col">
-          <div className="w-full flex justify-center flex-col items-start h-screen bg-fixed bg-cover bg-center bg-[url('./back.jpg')]">
+        <section className=" flex items-center justify-center w-[100%] m-auto lg:flex-row flex-col h-screen bg-fixed bg-cover bg-center bg-[url('./back.jpg')]">
+          <div className="w-full flex justify-center flex-col items-start ">
             <motion.div
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
@@ -44,7 +44,7 @@ export default function Home() {
                 typeSpeed={60}
                 backSpeed={70}
                 loop
-                className="text-cyan-500 font-light"
+                className="text-cyan-500 font-bold"
               ></ReactTyped>
             </motion.div>
           </div>
