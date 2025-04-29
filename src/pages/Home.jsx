@@ -31,12 +31,12 @@ export default function Home() {
         </div>
 
         <section className=" flex items-center justify-center w-[100%] m-auto lg:flex-row flex-col">
-          <div className="w-full flex justify-center flex-col items-start h-screen bg-fixed bg-cover bg-center   bg-[url('https://img.freepik.com/free-photo/flat-lay-desk-with-phone-laptop-5g-text_23-2148291132.jpg?t=st=1744892876~exp=1744896476~hmac=0b960f77743b79aae14425a018033e8f0d6bb64bca3e51be2509f14d4c1a3ab7&w=1380')]">
+          <div className="w-full flex justify-center flex-col items-start h-screen bg-fixed bg-bottom bg-cover   bg-[url('./back.jpg')]">
             <motion.div
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, ease: "linear" }}
-              className="w-[90%] m-auto capitalize lg:text-6xl font-extralight text-3xl text-gray-500"
+              className="w-[90%] m-auto capitalize lg:text-6xl font-extralight text-3xl text-white"
             >
               a store that is designed<br></br> for your{" "}
               <ReactTyped
